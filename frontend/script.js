@@ -145,7 +145,6 @@ let user;
 document.getElementById("connectBtn").onclick = connect;
 document.getElementById("createBtn").onclick = createCampaign;
 
-// ---------------- CONNECT ----------------
 async function connect() {
   if (!window.ethereum) return alert("Install MetaMask");
 
