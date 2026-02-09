@@ -3,65 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>Crowdfunding DApp</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- header -->
-  <header class="header">
-    <h1>Crowdfunding DApp</h1>
-    <button id="connectBtn" class="btn-primary">
-      Connect MetaMask
-    </button>
-  </header>
+<h1>Crowdfunding DApp</h1>
 
-  <!-- wallet info -->
-  <section class="wallet">
-    <p><strong>Wallet:</strong> <span id="walletAddress">Not connected</span></p>
-    <p><strong>Network:</strong> <span id="networkName">—</span></p>
-    <p><strong>ETH Balance:</strong> <span id="ethBalance">0</span></p>
-    <p><strong>Reward Tokens:</strong> <span id="tokenBalance">0</span></p>
-  </section>
+<button id="connectBtn">Connect MetaMask</button>
 
-  <!-- create campaign -->
-  <section class="card">
-    <h2>Create Campaign</h2>
+<p>Wallet: <span id="walletAddress">—</span></p>
+<p>Network: <span id="networkName">—</span></p>
+<p>ETH Balance: <span id="ethBalance">0</span></p>
 
-    <form class="form">
-      <input id="titleInput" type="text" placeholder="Campaign title" />
-      <input id="goalInput" type="number" placeholder="Funding goal (ETH)" />
-      <input id="dateInput" type="date" />
-      <button id="createBtn" class="btn-primary" type="button">
-        Create
-      </button>
-    </form>
-  </section>
+<hr>
 
-  <!-- campaigns list (static for now) -->
-  <section class="campaigns">
-    <h2>Active Campaigns</h2>
+<h2>Create Campaign</h2>
+<input id="titleInput" placeholder="Title"><br>
+<input id="goalInput" placeholder="Goal ETH"><br>
+<input id="dateInput" type="date"><br>
+<button id="createBtn">Create</button>
 
-    <div class="campaign-card">
-      <h3>Example campaign</h3>
-      <p>Goal: 10 ETH</p>
-      <p>Raised: 3 ETH</p>
-      <p>Deadline: 2026-05-01</p>
+<hr>
 
-      <div class="contribute">
-        <input type="number" placeholder="ETH amount" />
-        <button class="btn-secondary">Contribute</button>
-      </div>
-    </div>
-  </section>
+<h2>Active Campaigns</h2>
+<div id="campaigns"></div>
 
-  <!-- footer -->
-  <footer class="footer">
-    <p>Ethereum Testnet only · Educational project</p>
-  </footer>
-
-  <!-- scripts -->
-  <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
-  <script src="script.js"></script>
-
+<script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
